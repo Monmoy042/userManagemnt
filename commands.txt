@@ -1,0 +1,67 @@
+Check UID
+==========
+id userName
+
+Check User Information
+=======================
+cat /etc/passwd
+cat -n /etc/passwd
+tail /etc/passwd
+
+Check User Password Information
+=================================
+cat /etc/shadow
+tail /etc/shadow
+
+Show Particular User Information
+=================================
+grep userName /etc/passwd
+
+Check Particular User Password Information
+===========================================
+grep userName /etc/shadow
+
+Add New User
+=============
+useradd userName
+
+Set Password to a new User
+===========================
+passwd userName
+
+Delete password of an User
+============================
+passwd -d userName
+
+Add a New User with a Fixed UID
+=================================
+useradd -u UID userName
+
+Create a New group
+====================
+groupadd groupName
+
+Check Group Information
+=========================
+cat /etc/group
+tail /etc/group
+
+Check a particular group Information
+======================================
+grep groupName /etc/group
+
+Add a New Group with Fixed GID
+================================
+groupadd -g GID groupName
+
+Add a particular User to a Group
+==================================
+usermod -G groupName userName
+
+Change a Group Name 
+=====================
+groupmod -n perviousGroupName new groupName
+
+Delete User from a Group
+=========================
+gpasswd -d userName groupName

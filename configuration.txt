@@ -1,0 +1,33 @@
+Task-1
+=========
+[root@centos ~]# useradd john
+[root@centos ~]# id john
+[root@centos ~]# grep john /etc/passwd
+[root@centos ~]# cat /etc/passwd
+
+Task-2
+=========
+[root@centos ~]# passwd john
+[root@centos ~]# cat /etc/shadow
+[root@centos ~]# grep john /etc/shadow
+[root@centos ~]# tail /etc/shadow
+
+Task-3
+========
+[root@centos ~]# useradd jane
+[root@centos ~]# useradd jake
+[root@centos ~]# useradd jonas
+[root@centos ~]# useradd jave
+[root@centos ~]# tail /etc/passwd
+
+[root@centos ~]# groupadd admin
+[root@centos ~]# groupadd sales
+[root@centos ~]# tail /etc/group
+[root@centos ~]# grep admin /etc/group
+[root@centos ~]# grep sales /etc/group
+
+[root@centos ~]# usermod -G admin jane
+[root@centos ~]# usermod -G admin jave
+[root@centos ~]# usermod -G sales jake
+[root@centos ~]# usermod -G sales jonas
+[root@centos ~]# tail /etc/group
